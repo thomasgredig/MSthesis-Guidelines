@@ -119,7 +119,7 @@ All publications and documents are stored in the *Papers* folder using the file 
 # R
 
 
-Data analysis and results graphing should be done using `R` language, so that it is reproducible. 
+Data analysis and results graphing should be done using `R` language, so that it is reproducible.
 
 Organize yourself in the following way.
 
@@ -127,9 +127,11 @@ Organize yourself in the following way.
 - Make a file called `myConfig.R` and define all folders in there that will be used, so that the files can be run on different systems.
 
 
-## Usefule LaTeX Commands
+## Useful LaTeX Commands
 
-Here is a list of useful commands in LaTeX:
+Here is a list of useful commands in LaTeX
+
+#### Proper Spacing for SI units
 
 ```LaTeX
 \usepackage{siunitx}		
@@ -137,9 +139,12 @@ Here is a list of useful commands in LaTeX:
 \DeclareSIUnit\oersted{Oe}
 
 \SI{e-7}{\meter} is \SI{0.1}{\micro\meter}
+
+# for units only use
+\si{\nano\meter}
 ```
 
-Define the width of the graphs globally:
+#### Common Widths for Graphs
 
 ```LaTeX
 \newcommand{\FIGwide}{0.9\textwidth}
@@ -152,6 +157,44 @@ Define the width of the graphs globally:
     \label{fig:mylabel}
 \end{figure}
 ```
+
+#### Angles
+
+```LaTeX
+\ang{6.8}
+```
+
+Whenever possible, LaTeX tables should be generated using `R` and saved in the Results-Generated folder, then use (note that the file that generates is the same, such as sample-table.R, or sample.R)
+
+```LaTeX
+\input{../../Results-Generated/sample-table.tex}
+```
+If a table is not generated in `R`, then save an Excel spreadsheet or CSV spreadsheet in the `Results` folder and use [Table Generator Online](https://www.tablesgenerator.com/latex_tables) and include the filename in the LaTeX document, so that it can be easily updated, if needed.
+
+
+
+#### Bibliography
+
+For bibliography, you can use the natbib or apacite packages, here is an example:
+
+```LaTeX
+\usepackage[square,sort,comma,numbers,sort&compress]{natbib}
+# \usepackage[apaciteclassic,nodoi]{apacite}
+
+\cite{Gredig_Substrate-controlled_2012}
+
+# for author names
+\citeauthor{Gredig_Substrate-controlled_2012}
+
+# for displaying the year of the article
+\citeyear{Gredig_Substrate-controlled_2012}
+
+\bibliographystyle{plainnat}
+# \bibliographystyle{apacite}
+
+\bibliography{myBib}
+```
+It is sometimes needed to make the bibliography smaller, since it may contain many citations, which are not used. You can use this `main.R` to accomplish this: [LaTeX Trim BibTeX](https://github.com/thomasgredig/LaTeX-trim-BibTeX)
 
 
 ## Useful Commands in R

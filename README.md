@@ -175,7 +175,7 @@ If a table is not generated in `R`, then save an Excel spreadsheet or CSV spread
 
 #### Bibliography
 
-For bibliography, you can use the natbib or apacite packages, here is an example:
+For bibliography, you can use the [natbib](https://www.ctan.org/pkg/natbib) or [apacite](https://www.ctan.org/pkg/apacite) packages, here is an example:
 
 ```LaTeX
 \usepackage[square,sort,comma,numbers,sort&compress]{natbib}
@@ -199,6 +199,13 @@ It is sometimes needed to make the bibliography smaller, since it may contain ma
 
 ## Useful Commands in R
 
+First few lines of your `R` code should load the libraries and also some common data:
+
+```R
+library(ggplot2)
+source('myConfig.R')
+```
+
 Creating relative file paths:
 
 ```R
@@ -206,11 +213,37 @@ Creating relative file paths:
 my.path = file.path('..','RAW')
 ```
 
-```R
-```
+Basic plot using [ggplot2](https://ggplot2.tidyverse.org/):
 
 ```R
+library(ggplot2)
+d = read.csv(file.path(path.RAW,'data.csv'))
+ggplot(d, aes(x,y, col=type)) +
+  geom_point(size=2) +
+  xlab('T (K)') +
+  ylab(expression(paste('M'[sat],' (10'^-6,' emu)'))) +
+  theme_bw(base_size = 18)
+ggsave(file.path(path.FIGS,'MvsH-data.png'), width=6, height=4, dpi=220)
 ```
 
+There are some libraries that are useful to analyze the following data:
+
+- VSM: see [Quantum Design PPMS package](https://github.com/thomasgredig/quantumPPMS)
+- XRD: see [Rigaku XRD package](https://github.com/thomasgredig/rigakuXRD)
+- AFM: see [AFM package](https://github.com/thomasgredig/nanoscopeAFM)
+
+Here is how you could load these packages:
+
+
 ```R
+# this needs to be installed only once:
+install.packages("devtools")
+devtools::install_github("thomasgredig/nanoscopeAFM")
+devtools::install_github("thomasgredig/quantumPPMS")
+devtools::install_github("thomasgredig/rigakuXRD")
+
+# libraries must be loaded each time:
+library(nanoscopeAFM)
+library(quantumPPMS)
+library(rigakuXRD)
 ```

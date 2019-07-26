@@ -115,3 +115,59 @@ You need to configure the extension as follows: Go to **Preferences** -> **Bette
  ```
 
 All publications and documents are stored in the *Papers* folder using the file naming convention above. The advantage of this labeling system are that you can search for the paper by typing the first author name and search for PDF files on your computer, once you have the PDF filename you can also easily cite the work, plus there is no confusion about the year it was published.
+
+# R
+
+
+Data analysis and results graphing should be done using `R` language, so that it is reproducible. 
+
+Organize yourself in the following way.
+
+- Make a file called `make-thesis-graphs.R` and include all subroutines that generate graphs there.
+- Make a file called `myConfig.R` and define all folders in there that will be used, so that the files can be run on different systems.
+
+
+## Usefule LaTeX Commands
+
+Here is a list of useful commands in LaTeX:
+
+```LaTeX
+\usepackage{siunitx}		
+\sisetup{detect-weight=true, detect-family=true} % bold font support
+\DeclareSIUnit\oersted{Oe}
+
+\SI{e-7}{\meter} is \SI{0.1}{\micro\meter}
+```
+
+Define the width of the graphs globally:
+
+```LaTeX
+\newcommand{\FIGwide}{0.9\textwidth}
+
+\begin{figure}
+    \centering    # note file extension not needed
+    \includegraphics[width=\FIGwide]{imagefile}  
+    \caption[short caption for TOC]
+      {Long and detailled caption that appears under figure.}
+    \label{fig:mylabel}
+\end{figure}
+```
+
+
+## Useful Commands in R
+
+Creating relative file paths:
+
+```R
+# generates ../RAW or ..\RAW depending on the OS
+my.path = file.path('..','RAW')
+```
+
+```R
+```
+
+```R
+```
+
+```R
+```

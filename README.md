@@ -143,6 +143,18 @@ Here is a list of useful commands in LaTeX
 # for units only use
 \si{\nano\meter}
 ```
+#### Changing the name / capitalization of the Table of Contents
+
+The table of contents can be changed, even if you are using the babel pacakge, since `\renewcommand{\contentsname}{Table of Contents}` may not work in that environment.
+
+```LaTeX
+\usepackage[english]{babel}  
+\addto\captionsenglish{\def\contentsname{TABLE OF CONTENTS}}
+\KOMAoptions{toc=chapterentrydotfill} % dotted chapter entries
+\setkomafont{chapterentry}{} % make chapter titles not bold
+\addtokomafont{chapterentrypagenumber}{\mdseries} % make page numbers not bold
+```
+
 
 #### Common Widths for Graphs
 

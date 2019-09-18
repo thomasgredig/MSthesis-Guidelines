@@ -129,7 +129,7 @@ Organize yourself in the following way.
 
 ## Useful LaTeX Commands
 
-Here is a list of useful commands in LaTeX
+Here is a list of useful commands in LaTeX:
 
 #### Proper Spacing for SI units
 
@@ -143,7 +143,15 @@ Here is a list of useful commands in LaTeX
 # for units only use
 \si{\nano\meter}
 ```
+
 #### Changing the name / capitalization of the Table of Contents
+
+For longer documents KOMA class is useful, but it is not compatible with all the other commands. A typical document [KOMA script](http://texdoc.net/texmf-dist/doc/latex/koma-script/scrguien.pdf) would start with:
+
+```LaTeX
+\documentclass[12pt,oneside,letterpaper,
+    chapterprefix=on,numbers=noenddot]{scrbook}
+```
 
 The table of contents can be changed, even if you are using the babel pacakge, since `\renewcommand{\contentsname}{Table of Contents}` may not work in that environment.
 
@@ -162,7 +170,7 @@ The table of contents can be changed, even if you are using the babel pacakge, s
 \newcommand{\FIGwide}{0.9\textwidth}
 
 \begin{figure}
-    \centering    # note file extension not needed
+    \centering    % note: file extension not needed
     \includegraphics[width=\FIGwide]{imagefile}  
     \caption[short caption for TOC]
       {Long and detailled caption that appears under figure.}

@@ -127,9 +127,9 @@ Organize yourself in the following way.
 - Make a file called `myConfig.R` and define all folders in there that will be used, so that the files can be run on different systems.
 
 
-## Useful LaTeX Commands
+## LaTeX
 
-Here is a list of useful commands in LaTeX:
+The (M.S. thesis template)[https://github.com/thomasgredig/MSthesis-template] is available as a LaTeX document. Here is a list of useful commands in LaTeX:
 
 #### Proper Spacing for SI units
 

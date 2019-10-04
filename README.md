@@ -129,7 +129,7 @@ Organize yourself in the following way.
 
 ## LaTeX
 
-The (M.S. thesis template)[https://github.com/thomasgredig/MSthesis-template] is available as a LaTeX document. Here is a list of useful commands in LaTeX:
+The [M.S. thesis template](https://github.com/thomasgredig/MSthesis-template) is available as a LaTeX document. Here is a list of useful commands in LaTeX:
 
 #### Proper Spacing for SI units
 

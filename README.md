@@ -1,10 +1,12 @@
 # MSthesis-Guidelines
  guidelines for writing an M.S. thesis
 
+ Physics is a science based on experimental observations. Its existence depends on **quality** science. Therefore, practices need to be put in place to help guarantee high-quality, reproducible, scientific results.
+
 
 # M.S. Thesis
 
-You should be familiar with writing and if not refresh your memory with a book, such as "A Manual for Writers of Research Papers, Theses and Dissertations" by Kate L. Turabian. It contains general information. In the following, we will add some specific approaches towards writing a physics M.S. thesis in experimental condensed matter.
+The master's thesis represents *original* research. Details to support your claims must be included. You should be familiar with writing and if not refresh your memory with a book, such as "A Manual for Writers of Research Papers, Theses and Dissertations" by [Kate L. Turabian](https://www.amazon.com/s?k=Kate+L.+Turabian). It contains general information. In the following, we will add some specific approaches towards writing a physics M.S. thesis in experimental condensed matter.
 
 # Software Packages
 
@@ -14,11 +16,15 @@ You should be familiar with writing and if not refresh your memory with a book, 
  * [R](https://www.r-project.org/) for graphs and tables, see [R scientific reproducibility](https://swcarpentry.github.io/r-novice-gapminder/)
  * [LaTeX](https://www.latex-project.org/) for Thesis, learn how to use on [OverLeaf](https://www.overleaf.com/learn)
 
+Additional tools:
+
+* [ChemFig R](https://github.com/thomasgredig/chemfig-phthalocyanine) package for drawing molecules in LaTeX
+* [Quantum Design R](https://github.com/thomasgredig/quantumPPMS) package for analyzing VSM data
 
 
 # Comprehensive Powerpoint File
 
-Keep a lengthy comprehensive powerpoint file. It should include data more or less in chronological order. It is not important to keep it tidy, but rather it is important to keep it clean and update this file regularly. It should contain 100 - 300 slides. The slides can include photos of samples, reviews and snippets of literature, graphs from results, calculations from the analysis, schematics and plans. Use the *notes* section to add folder, filenames, and other information pertinent to the graph.
+Keep a lengthy comprehensive powerpoint file. It should include data more or less in chronological order at this point. It includes photos with details. It is not important to keep it organized, but rather it is important to keep it clean and updated. Regularly, add details, data, information, and observations. It should contain 100 - 300 slides. The slides can include photos of samples, personal reviews and snippets of literature, graphs from results, calculations from the analysis, schematics and plans. Use the *notes* section to add folder, filenames, and other information pertinent to the graphs. Photos and data files may additionally need to be stored in the RAW folder.
 
 
 # File System
@@ -282,3 +288,8 @@ library(nanoscopeAFM)
 library(quantumPPMS)
 library(rigakuXRD)
 ```
+
+
+# References
+
+- Cheating and its Dangers, Dean F. Martin, Technology and Innovation, Vol 21, pp. 19-27, 2019.

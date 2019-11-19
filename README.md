@@ -272,6 +272,7 @@ There are some libraries that are useful to analyze the following data:
 - VSM: see [Quantum Design PPMS package](https://github.com/thomasgredig/quantumPPMS)
 - XRD: see [Rigaku XRD package](https://github.com/thomasgredig/rigakuXRD)
 - AFM: see [AFM package](https://github.com/thomasgredig/nanoscopeAFM)
+- NTE: see [NTE package](https://github.com/thomasgredig/NTE-Deposition-Parameters)
 
 Here is how you could load these packages:
 
